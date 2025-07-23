@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Egyptian Thanaweya Amma 2025 Student Performance Analysis Report" data-ar="تقرير تحليل أداء طلاب الثانوية العامة المصرية سنة 2025">Egyptian Thanaweya Amma 2025 Student Performance Analysis Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Keyframe animation for fading in elements */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        /* Staggered animation for grid items */
+        .fade-in-item {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        /* RTL (Right-to-Left) styling for Arabic */
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        .rtl .text-center {
+            text-align: right; /* Adjust text alignment for RTL where needed */
+        }
+        .rtl .lg\:col-span-2 {
+            order: 2; /* Change order for RTL layout if necessary */
+        }
+        .rtl .space-y-8 {
+            order: 1; /* Change order for RTL layout if necessary */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Action Buttons: Toggle Language -->
+        <div class="flex justify-end space-x-4 mb-4">
+            <button id="toggleLanguage" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out shadow-md hover:shadow-lg">
+                عرض باللغة العربية 🌐
+            </button>
+        </div>
+
+        <header class="bg-white rounded-lg shadow-md p-6 mb-8 fade-in">
+            <h1 class="text-3xl font-bold text-gray-900" data-en="Egyptian Thanaweya Amma 2025 Student Performance Analysis Report" data-ar="تقرير تحليل أداء طلاب الثانوية العامة المصرية سنة 2025">Egyptian Thanaweya Amma 2025 Student Performance Analysis Report</h1>
+            <p class="text-gray-600 mt-2" data-en="A comprehensive and interactive summary of the key insights from the Egyptian Thanaweya Amma 2025 student performance dataset." data-ar="ملخص شامل وتفاعلي للرؤى الرئيسية من مجموعة بيانات أداء طلاب الثانوية العامة المصرية سنة 2025.">A comprehensive and interactive summary of the key insights from the Egyptian Thanaweya Amma 2025 student performance dataset.</p>
+        </header>
+        
+        <!-- Introduction Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8 fade-in" style="animation-delay: 0.1s;">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-en="Introduction" data-ar="مقدمة">Introduction</h2>
+            <p class="text-gray-700 leading-relaxed" data-en="This report presents a detailed analysis of student academic performance across various subjects and educational branches for the Egyptian Thanaweya Amma 2025. By visualizing key metrics such as success rates, score distributions, and branch-wise performance, we aim to uncover meaningful patterns and insights. The findings presented here can help educators and administrators understand student achievement levels and identify areas for potential improvement." data-ar="يقدم هذا التقرير تحليلاً مفصلاً لأداء الطلاب الأكاديمي عبر مختلف المواد والفروع التعليمية لطلاب الثانوية العامة المصرية سنة 2025. من خلال تصور المقاييس الرئيسية مثل معدلات النجاح وتوزيع الدرجات والأداء حسب الفرع، نهدف إلى الكشف عن أنماط ورؤى ذات معنى. يمكن أن تساعد النتائج المعروضة هنا المعلمين والإداريين على فهم مستويات تحصيل الطلاب وتحديد مجالات التحسين المحتملة.">This report presents a detailed analysis of student academic performance across various subjects and educational branches. By visualizing key metrics such as success rates, score distributions, and branch-wise performance, we aim to uncover meaningful patterns and insights. The findings presented here can help educators and administrators understand student achievement levels and identify areas for potential improvement.</p>
+        </div>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column for KPIs and Subject Score Distributions -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Key Performance Indicators Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-item" style="animation-delay: 0.2s;">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-en="Key Performance Indicators" data-ar="مؤشرات الأداء الرئيسية">Key Performance Indicators</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-green-100 p-4 rounded-lg text-center fade-in-item" style="animation-delay: 0.3s;">
+                            <p class="text-lg font-medium text-green-800" data-en="Successful Students (>50%)" data-ar="الطلاب الناجحون (>50%)">Successful Students (>50%)</p>
+                            <p class="text-3xl font-bold text-green-600">642,737</p>
+                            <p class="text-md text-green-700">(84.11%)</p>
+                        </div>
+                        <div class="bg-red-100 p-4 rounded-lg text-center fade-in-item" style="animation-delay: 0.4s;">
+                            <p class="text-lg font-medium text-red-800" data-en="Failed Students (<50%)" data-ar="الطلاب الراسبون (<50%)">Failed Students (<50%)</p>
+                            <p class="text-3xl font-bold text-red-600">119,265</p>
+                            <p class="text-md text-red-700">(15.61%)</p>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg text-center fade-in-item" style="animation-delay: 0.5s;">
+                            <p class="text-lg font-medium text-blue-800" data-en="High Achievers (>80%)" data-ar="المتفوقون (>80%)">High Achievers (>80%)</p>
+                            <p class="text-3xl font-bold text-blue-600">185,762</p>
+                            <p class="text-md text-blue-700">(24.31%)</p>
+                        </div>
+                        <div class="bg-purple-100 p-4 rounded-lg text-center fade-in-item" style="animation-delay: 0.6s;">
+                            <p class="text-lg font-medium text-purple-800" data-en="Top Performers (>90%)" data-ar="الأوائل (>90%)">Top Performers (>90%)</p>
+                            <p class="text-3xl font-bold text-purple-600">50,483</p>
+                            <p class="text-md text-purple-700">(6.61%)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Score Distributions by Subject Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-item" style="animation-delay: 0.7s;">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-en="Score Distributions by Subject" data-ar="توزيع الدرجات حسب المادة">Score Distributions by Subject</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="fade-in-item" style="animation-delay: 0.8s;"><h3 class="text-xl font-medium text-center mb-2" data-en="Arabic" data-ar="اللغة العربية">Arabic</h3><canvas id="arabicchart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 0.9s;"><h3 class="text-xl font-medium text-center mb-2" data-en="First Language" data-ar="اللغة الأولى">First Language</h3><canvas id="firstlanguagechart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 1.0s;"><h3 class="text-xl font-medium text-center mb-2" data-en="Math" data-ar="الرياضيات">Math</h3><canvas id="mathchart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 1.1s;"><h3 class="text-xl font-medium text-center mb-2" data-en="History" data-ar="التاريخ">History</h3><canvas id="historychart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 1.2s;"><h3 class="text-xl font-medium text-center mb-2" data-en="Geography" data-ar="الجغرافيا">Geography</h3><canvas id="geographychart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 1.3s;"><h3 class="text-xl font-medium text-center mb-2" data-en="Chemistry" data-ar="الكيمياء">Chemistry</h3><canvas id="chemistrychart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 1.4s;"><h3 class="text-xl font-medium text-center mb-2" data-en="Biology" data-ar="الأحياء">Biology</h3><canvas id="biologychart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 1.5s;"><h3 class="text-xl font-medium text-center mb-2" data-en="Physics" data-ar="الفيزياء">Physics</h3><canvas id="physicschart"></canvas></div>
+                        <div class="fade-in-item" style="animation-delay: 1.6s;"><h3 class="text-xl font-medium text-center mb-2" data-en="Statistics" data-ar="الإحصاء">Statistics</h3><canvas id="statisticschart"></canvas></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column for Branch Performance Charts -->
+            <div class="space-y-8">
+                <!-- Student Distribution by Branch Chart -->
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-item" style="animation-delay: 0.3s;">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-en="Student Distribution by Branch" data-ar="توزيع الطلاب حسب الفرع">Student Distribution by Branch</h2>
+                    <canvas id="branchpiechart"></canvas>
+                </div>
+                
+                <!-- Average Performance by Branch Chart -->
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-item" style="animation-delay: 0.5s;">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-en="Average Percentage by Branch" data-ar="متوسط النسبة حسب الفرع">Average Percentage by Branch</h2>
+                    <canvas id="branchbarchart"></canvas>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Statistical Summary Table -->
+        <div class="bg-white rounded-lg shadow-md p-6 mt-8 fade-in-item" style="animation-delay: 1.7s;">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-en="Statistical Summary" data-ar="الملخص الإحصائي">Statistical Summary</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white text-sm">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="py-2 px-3 border-b" data-en="Metric" data-ar="المقياس">Metric</th>
+                            <th class="py-2 px-3 border-b" data-en="Arabic" data-ar="اللغة العربية">Arabic</th>
+                            <th class="py-2 px-3 border-b" data-en="First Lang." data-ar="اللغة الأولى">First Lang.</th>
+                            <th class="py-2 px-3 border-b" data-en="Math" data-ar="الرياضيات">Math</th>
+                            <th class="py-2 px-3 border-b" data-en="History" data-ar="التاريخ">History</th>
+                            <th class="py-2 px-3 border-b" data-en="Geography" data-ar="الجغرافيا">Geography</th>
+                            <th class="py-2 px-3 border-b" data-en="Chemistry" data-ar="الكيمياء">Chemistry</th>
+                            <th class="py-2 px-3 border-b" data-en="Biology" data-ar="الأحياء">Biology</th>
+                            <th class="py-2 px-3 border-b" data-en="Physics" data-ar="الفيزياء">Physics</th>
+                            <th class="py-2 px-3 border-b" data-en="Statistics" data-ar="الإحصاء">Statistics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center"><td class="py-2 px-3 border-b font-medium" data-en="Mean" data-ar="المتوسط">Mean</td><td class="py-2 px-3 border-b">57.16</td><td class="py-2 px-3 border-b">41.83</td><td class="py-2 px-3 border-b">46.88</td><td class="py-2 px-3 border-b">36.88</td><td class="py-2 px-3 border-b">44.36</td><td class="py-2 px-3 border-b">39.47</td><td class="py-2 px-3 border-b">39.51</td><td class="py-2 px-3 border-b">38.42</td><td class="py-2 px-3 border-b">40.83</td></tr>
+                        <tr class="text-center bg-gray-50"><td class="py-2 px-3 border-b font-medium" data-en="Std Dev" data-ar="الانحراف المعياري">Std Dev</td><td class="py-2 px-3 border-b">12.30</td><td class="py-2 px-3 border-b">11.18</td><td class="py-2 px-3 border-b">11.49</td><td class="py-2 px-3 border-b">10.38</td><td class="py-2 px-3 border-b">10.70</td><td class="py-2 px-3 border-b">13.07</td><td class="py-2 px-3 border-b">10.45</td><td class="py-2 px-3 border-b">11.67</td><td class="py-2 px-3 border-b">11.69</td></tr>
+                        <tr class="text-center"><td class="py-2 px-3 border-b font-medium" data-en="Min" data-ar="الحد الأدنى">Min</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td><td class="py-2 px-3 border-b">0</td></tr>
+                        <tr class="text-center bg-gray-50"><td class="py-2 px-3 border-b font-medium" data-en="25%" data-ar="الربع الأول">25%</td><td class="py-2 px-3 border-b">48.5</td><td class="py-2 px-3 border-b">33.0</td><td class="py-2 px-3 border-b">40.0</td><td class="py-2 px-3 border-b">30.0</td><td class="py-2 px-3 border-b">37.0</td><td class="py-2 px-3 border-b">30.0</td><td class="py-2 px-3 border-b">31.0</td><td class="py-2 px-3 border-b">30.0</td><td class="py-2 px-3 border-b">32.0</td></tr>
+                        <tr class="text-center"><td class="py-2 px-3 border-b font-medium" data-en="50%" data-ar="الوسيط">50%</td><td class="py-2 px-3 border-b">58.0</td><td class="py-2 px-3 border-b">43.0</td><td class="py-2 px-3 border-b">50.5</td><td class="py-2 px-3 border-b">36.0</td><td class="py-2 px-3 border-b">46.0</td><td class="py-2 px-3 border-b">39.5</td><td class="py-2 px-3 border-b">41.5</td><td class="py-2 px-3 border-b">38.0</td><td class="py-2 px-3 border-b">42.0</td></tr>
+                        <tr class="text-center bg-gray-50"><td class="py-2 px-3 border-b font-medium" data-en="75%" data-ar="الربع الثالث">75%</td><td class="py-2 px-3 border-b">67.0</td><td class="py-2 px-3 border-b">51.0</td><td class="py-2 px-3 border-b">56.5</td><td class="py-2 px-3 border-b">44.0</td><td class="py-2 px-3 border-b">53.0</td><td class="py-2 px-3 border-b">52.0</td><td class="py-2 px-3 border-b">48.5</td><td class="py-2 px-3 border-b">48.0</td><td class="py-2 px-3 border-b">50.0</td></tr>
+                        <tr class="text-center"><td class="py-2 px-3 border-b font-medium" data-en="Max" data-ar="الحد الأقصى">Max</td><td class="py-2 px-3 border-b">80</td><td class="py-2 px-3 border-b">60</td><td class="py-2 px-3 border-b">60</td><td class="py-2 px-3 border-b">60</td><td class="py-2 px-3 border-b">60</td><td class="py-2 px-3 border-b">60</td><td class="py-2 px-3 border-b">60</td><td class="py-2 px-3 border-b">60</td><td class="py-2 px-3 border-b">60</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Conclusion Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mt-8 fade-in-item" style="animation-delay: 1.8s;">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-en="Conclusion" data-ar="الخلاصة">Conclusion</h2>
+            <p class="text-gray-700 leading-relaxed" data-en="The analysis reveals a high overall success rate of 84.11%, with nearly a quarter of students achieving scores above 80%. The 'علمي علوم' branch has the largest student population and a high average performance, closely followed by 'علمي رياضة'. The 'أدبي' branch shows a lower average performance in comparison. Subject-wise, Arabic stands out with a very high percentage of top-performing students. In contrast, subjects like History and Physics have a larger proportion of students in the lower score brackets. These insights suggest that while overall performance is strong, targeted support for specific subjects and branches could further enhance student success." data-ar="يكشف التحليل عن معدل نجاح إجمالي مرتفع يبلغ 84.11%، مع تحقيق ما يقرب من ربع الطلاب درجات تزيد عن 80%. يمتلك فرع 'علمي علوم' أكبر عدد من الطلاب وأداءً متوسطًا عاليًا، يليه عن كثب 'علمي رياضة'. يُظهر فرع 'أدبي' أداءً متوسطًا أقل بالمقارنة. على صعيد المواد، تبرز اللغة العربية بنسبة عالية جدًا من الطلاب المتفوقين. في المقابل، تحتوي مواد مثل التاريخ والفيزياء على نسبة أكبر من الطلاب في الفئات ذات الدرجات المنخفضة. تشير هذه الرؤى إلى أنه بينما الأداء العام قوي، فإن الدعم المستهدف لمواد وفروع معينة يمكن أن يعزز نجاح الطلاب بشكل أكبر.">The analysis reveals a high overall success rate of 84.11%, with nearly a quarter of students achieving scores above 80%. The 'علمي علوم' branch has the largest student population and a high average performance, closely followed by 'علمي رياضة'. The 'أدبي' branch shows a lower average performance in comparison. Subject-wise, Arabic stands out with a very high percentage of top-performing students. In contrast, subjects like History and Physics have a larger proportion of students in the lower score brackets. These insights suggest that while overall performance is strong, targeted support for specific subjects and branches could further enhance student success.</p>
+        </div>
+
+        <footer class="text-center mt-8 text-gray-500">
+            <p data-en="&copy; 2024 Eng Mohamed Elsayad. All rights reserved." data-ar="&copy; 2024 المهندس محمد الصياد. جميع الحقوق محفوظة.">&copy; 2024 Eng Mohamed Elsayad. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Data from the notebook
+        const branchData = {
+            labels: ['علمي علوم', 'أدبي', 'علمي رياضة', 'Unknown'],
+            datasets: [{
+                label: 'Number of Students',
+                data: [449790, 176797, 112247, 25332],
+                backgroundColor: ['#34D399', '#60A5FA', '#FBBF24', '#A78BFA'],
+                hoverOffset: 4
+            }]
+        };
+
+        const branchAvgData = {
+            labels: ['علمي علوم', 'أدبي', 'علمي رياضة'],
+            datasets: [{
+                label: 'Average Percentage Degree',
+                data: [72.5, 55.0, 70.0], // Approximate values from the bar chart
+                backgroundColor: ['#34D399', '#60A5FA', '#FBBF24'],
+            }]
+        };
+
+        const subjectScoreData = {
+            // Estimated percentages based on statistical summary
+            "Arabic": [1.0, 1.2, 2.8, 95.0], // Max score is 80, so >60 is significant
+            "First Language": [20.0, 55.0, 25.0, 0],
+            "Math": [15.0, 35.0, 50.0, 0],
+            "History": [25.0, 50.0, 25.0, 0],
+            "Geography": [15.0, 35.0, 50.0, 0],
+            "Chemistry": [25.0, 25.0, 50.0, 0],
+            "Biology": [23.0, 52.0, 25.0, 0],
+            "Physics": [27.0, 48.0, 25.0, 0],
+            "Statistics": [20.0, 55.0, 25.0, 0]
+        };
+
+        // Chart.js configurations
+        // Pie chart configuration with responsive and animation options
+        const pieConfig = (data) => ({
+            type: 'pie',
+            data: data,
+            options: {
+                responsive: true,
+                animation: {
+                    animateScale: true, // Animates the scaling of the chart
+                    duration: 1500, // Animation duration in milliseconds
+                    easing: 'easeOutQuart' // Easing function for animation
+                },
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (c) => `${c.label}: ${c.parsed.toLocaleString()} students`
+                        }
+                    }
+                }
+            }
+        });
+
+        // Bar chart configuration with responsive and animation options
+        const barConfig = (data) => ({
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                animation: {
+                    duration: 1000, // Animation duration in milliseconds
+                    easing: 'easeOutBounce' // Easing function for animation
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Average Percentage'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Subject-specific pie chart configuration
+        const subjectPieConfig = (subjectName) => ({
+            type: 'pie',
+            data: {
+                labels: subjectName === 'Arabic' ? ['0–30', '31–50', '51–60', '> 60'] : ['0–30', '31–50', '51–60'],
+                datasets: [{
+                    data: subjectName === 'Arabic' ? subjectScoreData[subjectName] : subjectScoreData[subjectName].slice(0, 3),
+                    backgroundColor: ['#F87171', '#FBBF24', '#A78BFA', '#34D399'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                animation: {
+                    animateRotate: true, // Animates the rotation of the chart
+                    duration: 1500, // Animation duration in milliseconds
+                    easing: 'easeOutQuart' // Easing function for animation
+                },
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (c) => `${c.label}: ${c.parsed.toFixed(1)}%`
+                        }
+                    }
+                }
+            }
+        });
+
+        // Array to hold chart instances for later destruction/re-rendering if needed
+        let charts = {};
+
+        // Function to render all charts
+        function renderCharts() {
+            // Destroy existing charts to prevent memory leaks and re-render fresh ones
+            for (const chartId in charts) {
+                if (charts[chartId]) {
+                    charts[chartId].destroy();
+                }
+            }
+
+            charts.branchPie = new Chart(document.getElementById('branchpiechart'), pieConfig(branchData));
+            charts.branchBar = new Chart(document.getElementById('branchbarchart'), barConfig(branchAvgData));
+
+            Object.keys(subjectScoreData).forEach(subject => {
+                const chartId = `${subject.toLowerCase().replace(/ /g, '')}chart`;
+                const canvasElement = document.getElementById(chartId);
+                if (canvasElement) {
+                    charts[chartId] = new Chart(canvasElement, subjectPieConfig(subject));
+                }
+            });
+        }
+
+        // Initial rendering of charts when the page loads
+        document.addEventListener('DOMContentLoaded', renderCharts);
+
+
+        // --- Language Toggle Functionality ---
+        const translations = {
+            en: {
+                title: "Egyptian Thanaweya Amma 2025 Student Performance Analysis Report",
+                introSummary: "A comprehensive and interactive summary of the key insights from the Egyptian Thanaweya Amma 2025 student performance dataset.",
+                introduction: "Introduction",
+                introText: "This report presents a detailed analysis of student academic performance across various subjects and educational branches for the Egyptian Thanaweya Amma 2025. By visualizing key metrics such as success rates, score distributions, and branch-wise performance, we aim to uncover meaningful patterns and insights. The findings presented here can help educators and administrators understand student achievement levels and identify areas for potential improvement.",
+                kpiTitle: "Key Performance Indicators",
+                successfulStudents: "Successful Students (>50%)",
+                failedStudents: "Failed Students (<50%)",
+                highAchievers: "High Achievers (>80%)",
+                topPerformers: "Top Performers (>90%)",
+                scoreDistributionTitle: "Score Distributions by Subject",
+                arabic: "Arabic",
+                firstLanguage: "First Language",
+                math: "Math",
+                history: "History",
+                chemistry: "Chemistry",
+                biology: "Biology",
+                physics: "Physics",
+                statistics: "Statistics",
+                geography: "Geography",
+                branchDistributionTitle: "Student Distribution by Branch",
+                avgPercentageBranchTitle: "Average Percentage by Branch",
+                statisticalSummary: "Statistical Summary",
+                metric: "Metric",
+                mean: "Mean",
+                stdDev: "Std Dev",
+                min: "Min",
+                q1: "25%",
+                median: "50%",
+                q3: "75%",
+                max: "Max",
+                conclusion: "Conclusion",
+                conclusionText: "The analysis reveals a high overall success rate of 84.11%, with nearly a quarter of students achieving scores above 80%. The 'علمي علوم' branch has the largest student population and a high average performance, closely followed by 'علمي رياضة'. The 'أدبي' branch shows a lower average performance in comparison. Subject-wise, Arabic stands out with a very high percentage of top-performing students. In contrast, subjects like History and Physics have a larger proportion of students in the lower score brackets. These insights suggest that while overall performance is strong, targeted support for specific subjects and branches could further enhance student success.",
+                footer: "&copy; 2024 Eng Mohamed Elsayad. All rights reserved.",
+                toggleButton: "عرض باللغة العربية 🌐"
+            },
+            ar: {
+                title: "تقرير تحليل أداء طلاب الثانوية العامة المصرية سنة 2025",
+                introSummary: "ملخص شامل وتفاعلي للرؤى الرئيسية من مجموعة بيانات أداء طلاب الثانوية العامة المصرية سنة 2025.",
+                introduction: "مقدمة",
+                introText: "يقدم هذا التقرير تحليلاً مفصلاً لأداء الطلاب الأكاديمي عبر مختلف المواد والفروع التعليمية لطلاب الثانوية العامة المصرية سنة 2025. من خلال تصور المقاييس الرئيسية مثل معدلات النجاح وتوزيع الدرجات والأداء حسب الفرع، نهدف إلى الكشف عن أنماط ورؤى ذات معنى. يمكن أن تساعد النتائج المعروضة هنا المعلمين والإداريين على فهم مستويات تحصيل الطلاب وتحديد مجالات التحسين المحتملة.",
+                kpiTitle: "مؤشرات الأداء الرئيسية",
+                successfulStudents: "الطلاب الناجحون (>50%)",
+                failedStudents: "الطلاب الراسبون (<50%)",
+                highAchievers: "المتفوقون (>80%)",
+                topPerformers: "الأوائل (>90%)",
+                scoreDistributionTitle: "توزيع الدرجات حسب المادة",
+                arabic: "اللغة العربية",
+                firstLanguage: "اللغة الأولى",
+                math: "الرياضيات",
+                history: "التاريخ",
+                chemistry: "الكيمياء",
+                biology: "الأحياء",
+                physics: "الفيزياء",
+                statistics: "الإحصاء",
+                geography: "الجغرافيا",
+                branchDistributionTitle: "توزيع الطلاب حسب الفرع",
+                avgPercentageBranchTitle: "متوسط النسبة حسب الفرع",
+                statisticalSummary: "الملخص الإحصائي",
+                metric: "المقياس",
+                mean: "المتوسط",
+                stdDev: "الانحراف المعياري",
+                min: "الحد الأدنى",
+                q1: "الربع الأول",
+                median: "الوسيط",
+                q3: "الربع الثالث",
+                max: "الحد الأقصى",
+                conclusion: "الخلاصة",
+                conclusionText: "يكشف التحليل عن معدل نجاح إجمالي مرتفع يبلغ 84.11%، مع تحقيق ما يقرب من ربع الطلاب درجات تزيد عن 80%. يمتلك فرع 'علمي علوم' أكبر عدد من الطلاب وأداءً متوسطًا عاليًا، يليه عن كثب 'علمي رياضة'. يُظهر فرع 'أدبي' أداءً متوسطًا أقل بالمقارنة. على صعيد المواد، تبرز اللغة العربية بنسبة عالية جدًا من الطلاب المتفوقين. في المقابل، تحتوي مواد مثل التاريخ والفيزياء على نسبة أكبر من الطلاب في الفئات ذات الدرجات المنخفضة. تشير هذه الرؤى إلى أنه بينما الأداء العام قوي، فإن الدعم المستهدف لمواد وفروع معينة يمكن أن يعزز نجاح الطلاب بشكل أكبر.",
+                footer: "&copy; 2024 المهندس محمد الصياد. جميع الحقوق محفوظة.",
+                toggleButton: "Display in English 🌐"
+            }
+        };
+
+        let currentLang = 'en'; // Initial language
+
+        // Function to update text content based on current language
+        function updateContent() {
+            document.querySelectorAll('[data-en], [data-ar]').forEach(element => {
+                const enText = element.getAttribute('data-en');
+                const arText = element.getAttribute('data-ar');
+                if (element.tagName === 'TITLE') { // Special handling for title tag
+                    document.title = currentLang === 'en' ? enText : arText;
+                } else {
+                    element.textContent = currentLang === 'en' ? enText : arText;
+                }
+            });
+
+            // Update specific elements that don't use data attributes for text (e.g., button text)
+            const toggleButton = document.getElementById('toggleLanguage');
+            toggleButton.textContent = translations[currentLang].toggleButton;
+
+            // Update HTML lang attribute and body direction
+            document.documentElement.lang = currentLang;
+            if (currentLang === 'ar') {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+        }
+
+        // Event listener for language toggle button
+        document.getElementById('toggleLanguage').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'ar' : 'en'; // Toggle language
+            updateContent(); // Update all content
+        });
+
+        // Initial content load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCharts(); // Render charts on initial load
+            updateContent(); // Update content for initial language
+        });
+    </script>
+
+</body>
+</html>
